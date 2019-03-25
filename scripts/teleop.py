@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import rospy
+#!/usr/bin/env python
+
 from geometry_msgs.msg import Twist
 from std_msgs.msg import String
 
@@ -9,7 +11,7 @@ def callback(data):
 	global fingers
 	fingers = data.data
 
-rospy.init_node('listener')
+rospy.init_node('teleop')
 rospy.Subscriber("num_of_fingers", String, callback)
 cmd_vel_pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
 rate = rospy.Rate(20)

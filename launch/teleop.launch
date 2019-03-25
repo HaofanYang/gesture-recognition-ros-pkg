@@ -1,0 +1,4 @@
+<launch>
+    <node name="num_of_fingers" pkg="gesture_teleop" type="detect.py" output="screen"/>
+    <node name="teleop" pkg="gesture_teleop" type="teleop.py" output="screen"/>
+</launch>

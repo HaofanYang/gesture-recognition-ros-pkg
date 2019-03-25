@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # organize imports
 import cv2
 import imutils
@@ -154,7 +156,7 @@ if __name__ == "__main__":
                 #print(defects)
                 defects = min(5, defects)
                 pub.publish(str(defects))
-                rospy.loginfo(defects)
+                #rospy.loginfo(defects)
                 cv2.putText(clone, str(defects), (bottom, left), cv2.FONT_HERSHEY_SIMPLEX, 2, 2)
                 cv2.imshow("Thesholded", thresholded)
 
